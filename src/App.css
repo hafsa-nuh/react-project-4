@@ -127,3 +127,17 @@ ul {
   font-size: 25px;
 }
 
+.footer-col .social-links ul li {
+  color: #24262b;
+  background-color: white;
+}
+
+.last p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+  color: #e91e63;
+  font-size: small;
+}
