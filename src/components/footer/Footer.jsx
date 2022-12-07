@@ -1,4 +1,7 @@
 import React from "react";
+import  {BsInstagram, BsTwitter, BsFacebook, BsYoutube, BsTelephonePlusFill} from 'react-icons/bs';
+import {BiMessageAdd} from 'react-icons/bi'
+
 
 const Footer = () => {
     return (
@@ -38,10 +41,12 @@ const Footer = () => {
            <h4>Socials</h4>
            <div className='social-links'>
             <ul>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Facebook </li>
-              <li>Youtube</li>
+              <li><BsTelephonePlusFill/></li>
+              <li><BiMessageAdd/></li>
+              <li><BsInstagram /></li>
+              <li><BsTwitter  /></li>
+              <li><BsFacebook /></li>
+              <li><BsYoutube /></li>
             </ul>
             </div>
          </div>
