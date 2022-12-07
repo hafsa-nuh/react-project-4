@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
+// import './Footer.css';
 import  {BsInstagram, BsTwitter, BsFacebook, BsYoutube, BsTelephonePlusFill} from 'react-icons/bs';
-import {BiMessageAdd} from 'react-icons/bi'
-
+import {BiMessageAdd} from 'react-icons/bi';
 
 const Footer = () => {
-    return (
-        <footer className='footer'>
+  return (
+    <footer className='footer'>
       <div className='container'>
         <div className='row'>
           <div className='footer-col'>
@@ -56,7 +56,8 @@ const Footer = () => {
           </div> 
       </div>
     </footer>
-    )
+     )
 }
 
-export default Footer;
+    export default Footer;
+  
