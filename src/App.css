@@ -1,40 +1,111 @@
+/* Final */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.buttons{
+.container {
+  max-width: 1170px;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.row {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
 }
-.buttons .add-to-cart{
-  border-radius: 0.375rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  border: 2px solid #8a4af3 ;
-  /* margin-top: 30px; */
-  padding: 10px 20px;
-  margin-top: 40px;
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  /* background-color: rgb(27,76,224); */
+  padding: 10px 0px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0, 15px;
+
+}
+
+.footer-col h4 {
   font-size: 18px;
-  font-weight: 500;
-  background-color: white;
-  color: #8a4af3;
-  cursor: pointer;
-  transform: scale(1, 1);
-  transition: transform 0.5s ease;
-}
-.buttons .add-to-cart:hover{
-  transform:scale(1.1,1.1)
-}
-.buttons .buy-now{
-  border-radius: 0.375rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  padding: 10px 20px;
-  background-color: #8a4af3;
   color: white;
-  border: none;
-  margin-top: 40px;
-  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 35px;
   font-weight: 500;
-  cursor: pointer;
-  transform: scale(1, 1);
-  transition: transform 0.5s ease;
+  position: relative;
 }
-.buttons .buy-now:hover{
-  transform:scale(1.1,1.1)
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+
+}
+
+.footer-col ul li:hover {
+  color: white;
+  padding-left: 8px;
+}
+
+.footer-col .social-links ul li {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 4px 10px 10px 4px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20%;
+  color: white;
+  transition: all 0.5s ease;
+  font-size: 25px;
+}
+
+.footer-col .social-links ul li:hover {
+  color: #24262b;
+  background-color: white;
+}
+
+.last p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+  color: #e91e63;
+  font-size: small;
+}
+@media (max-width: 767px){
+  .footer-col{
+    width: auto;
+    margin-bottom: 10px;
+  }
 }
