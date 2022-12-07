@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+ONLINE SNEAKERS SHOP
+React & Ruby Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GROUP MEMBERS
+Hafsa Nuh ➪ scrum master/backend developer
+Yego Kipkemoi ➪ frontend developer 
+Abdi Dumale➪ frontend developer/project presentation
+Lewis Munyambu➪frontend developer
+View LIVE:
 
-## Available Scripts
+SETUP
+to access this project on your local files, you can clone it using this steps
 
-In the project directory, you can run:
+Open the Terminal
+Clone the repository:https://github.com/hafsa-nuh/react-project-4
+Change Directory: cd react-project-4
 
-### `npm start`
+npm install
+if u get an error when running npm start ,then run
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+nvm install --lts
+open browser by running npm start
+The Idea
+It's a user-friendly online shop that aims to connect buyers and sellers in one line of product.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Webiste Screenshot
+Landing Page
+Website Screenshot
 
-### `npm test`
+Products Page
+Website Screenshot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Product Details Page
+Website Screenshot
 
-### `npm run build`
+Registration Page
+Website Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Add Cart Page
+Website Screenshot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Technologies Used
+JSX
+CSS
+Styled Components
+Slider JS
+Switch transition
+React
+Ruby
+Back-end Repo
+View LIVE:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+To install Postgres
+For this Project, we first had to install Postgres SQL as the database supported by our hosting service provider, Heroku.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+sudo systemctl start postgresql.service
+sudo -i -u postgres
+createdb databaseName
+sudo -i -u databaseName psql
+set postgress as default db in your sinatra project by replacing the sqlite configuration development:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+adapter: postgresql
+encoding: unicode
+database: database_name
+pool: 2
+username: your_username
+password: your_password
+production:
+adapter: postgresql
+encoding: unicode
+pool: 5
+host: <%= ENV['DATABASE_HOST'] %>
+database: <%= ENV['DATABASE_NAME'] %>
+username: <%= ENV['DATABASE_USER'] %>
+password: <%= ENV['DATABASE_PASSWORD'] %>with this:
+Also add the postgres gem
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+gem "pg"
+Single React App on Heroku
+Create a Heroku account/Log in using Heroku login.
+Create your app.
+Download Heroku CLI from here.
+Run these codes.
+heroku login
+git init
+git add .
+git commit -am "my first commit"
+git push heroku main
+heroku rake db:migrate db:seed
+heroku open
+Single React App on Vercel
+Create a Vercel account.
+Linking GitHub
+Continue with GitHub
+Add GitHub Repo
+Choose the repo to deploy
+Diploy
+LIVE SITE
+View LIVE:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+LICENSE
+This project is under the MIT license
