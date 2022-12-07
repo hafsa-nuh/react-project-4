@@ -1,8 +1,8 @@
-ONLINE SNEAKERS SHOP
+#ONLINE SNEAKERS SHOP
 
 React & Ruby Project
 
-GROUP MEMBERS
+##GROUP MEMBERS
 
 
 Hafsa Nuh ➪ scrum master/backend developer
@@ -17,7 +17,7 @@ Lewis Munyambu➪frontend developer
 View LIVE:
 
 
-SETUP
+###SETUP
 
 to access this project on your local files, you can clone it using this steps
 
@@ -35,7 +35,7 @@ nvm install --lts
 
 open browser by running npm start
 
-The Idea
+####The Idea
 
 It's a user-friendly online shop that aims to connect buyers and sellers in one line of product.
 
