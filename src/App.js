@@ -7,7 +7,10 @@ import Footer from './components/footer/Footer';
 function App() {
   return (
     <>
-    {/* <Navbar /> */}
+    <Navbar />
+    <br />
+    <br />
+    <br />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products/:id" element={<ProductsDetails />} />
