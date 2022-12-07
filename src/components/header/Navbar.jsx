@@ -4,10 +4,9 @@ const Navbar = () => {
     let Links =[
       {name:"Home",link:"/"},
       {name:"Sign-up",link:"/"},
-      {name:"sign-in",link:"/"},
-      
-     
+      {name:"sign-in",link:"/"}, 
     ];
+    
     let [open,setOpen]=useState(false);
   return (
     <div className='shadow-md w-full fixed top-0 left-0'>
