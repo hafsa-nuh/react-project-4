@@ -1,4 +1,5 @@
 ONLINE SNEAKERS SHOP
+
 React & Ruby Project
 
 GROUP MEMBERS
@@ -15,19 +16,27 @@ Lewis Munyambu➪frontend developer
 
 View LIVE:
 
+
 SETUP
+
 to access this project on your local files, you can clone it using this steps
 
 Open the Terminal
+
 Clone the repository:https://github.com/hafsa-nuh/react-project-4
+
 Change Directory: cd react-project-4
 
 npm install
+
 if u get an error when running npm start ,then run
 
 nvm install --lts
+
 open browser by running npm start
+
 The Idea
+
 It's a user-friendly online shop that aims to connect buyers and sellers in one line of product.
 
 Webiste Screenshot
