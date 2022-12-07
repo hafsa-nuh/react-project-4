@@ -37,7 +37,12 @@ const Footer = () => {
         <div className='footer-col'>
            <h4>Socials</h4>
            <div className='social-links'>
-            
+            <ul>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>Facebook </li>
+              <li>Youtube</li>
+            </ul>
             </div>
          </div>
         </div>
