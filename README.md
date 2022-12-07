@@ -2,10 +2,14 @@ ONLINE SNEAKERS SHOP
 React & Ruby Project
 
 GROUP MEMBERS
+
+
 Hafsa Nuh ➪ scrum master/backend developer
 Yego Kipkemoi ➪ frontend developer 
 Abdi Dumale➪ frontend developer/project presentation
 Lewis Munyambu➪frontend developer
+
+
 View LIVE:
 
 SETUP
