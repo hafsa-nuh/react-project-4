@@ -8,8 +8,8 @@ import Hero from "../components/home/Hero"
 function HomePage() {
   return (
     <>
-    <section className="flex flex-col gap-16 relative">
       <Hero/>
+    <section className="flex flex-col gap-16 relative">
       <TopSales />
       <Products />
       <HighLights/>

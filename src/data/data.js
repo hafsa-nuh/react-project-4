@@ -16,13 +16,31 @@ export const HeroSlider = [
     background: " bg-gradient-to-r from-cyan-500 to-blue-500",
   },
   {
-    src: "https://st3.depositphotos.com/7713882/17906/i/600/depositphotos_179068502-stock-photo-happy-woman-showing-good-big.jpg",
+    src: "https://i.postimg.cc/vmVCGtg4/hero.png",
     active: true,
     content: {
-      h2: "Bhai mein dosry number wala hn",
+      h2: "Amazing Deals this Winter",
       p: "Upto 40% off",
     },
-    background: " bg-[#ffd028]",
+    background: " bg-gradient-to-r from-purple-200 to-pink-500",
+  },
+  {
+    src: "https://www.jungle.com.pg/media/catalog/product/2/8/289280-289287a_8.png",
+    active: true,
+    content: {
+      h2: "All Winter",
+      p: "Upto 40% off",
+    },
+    background: " bg-gradient-to-r from-neutral-500 to--cyan-700  ",
+  },
+  {
+    src: "https://images.solecollector.com/complex/images/c_crop,h_1769,w_3144,x_0,y_848/dnrcqvnapepap77xruda/playstation-nike-pg-5-ps5-cw3144-100-9.png",
+    active: true,
+    content: {
+      h2: "All Winter",
+      p: "Upto 40% off",
+    },
+    background: " bg-gradient-to-r from-cyan-300 to-blue-700",
   },
 ];
 
