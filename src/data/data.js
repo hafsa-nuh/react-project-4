@@ -26,7 +26,6 @@ export const HeroSlider = [
   },
   {
     src: "https://www.jungle.com.pg/media/catalog/product/2/8/289280-289287a_8.png",
-    active: true,
     content: {
       h2: "All Winter",
       p: "Upto 40% off",
@@ -35,7 +34,6 @@ export const HeroSlider = [
   },
   {
     src: "https://images.solecollector.com/complex/images/c_crop,h_1769,w_3144,x_0,y_848/dnrcqvnapepap77xruda/playstation-nike-pg-5-ps5-cw3144-100-9.png",
-    active: true,
     content: {
       h2: "All Winter",
       p: "Upto 40% off",
