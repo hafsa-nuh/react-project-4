@@ -7,12 +7,24 @@ import {
 } from "react-icons/ai";
 import { NavLink } from 'react-router-dom';
 import logo from "../../assets/logo.png";
+import { useDispatch, useSelector } from "react-redux";
+import { currentUserAdded } from "../../features/signinSlice"
+import { useNavigate } from "react-router-dom";
 
 
-const Navbar = () => {
+const Navbar = ({ currentUser }) => {
+  console.log(currentUser + "username");
 
-  // const logo =
-  //   "https://w7.pngwing.com/pngs/147/564/png-transparent-puma-logo-brand-adidas-sneakers-adidas-cat-like-mammal-carnivoran-hand-thumbnail.png";
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function handleSignout() {
+    fetch("/signout", {
+      method: "delete",
+    });
+    dispatch(currentUserAdded(null));
+    navigate("/signin");
+  }
 
   const [navState, setNavState] = useState(false);
   const onNavScroll = () => {
@@ -68,12 +80,36 @@ const Navbar = () => {
                 }`}
               />
             </li>
+            {currentUser !== null && (
+              <>
+                <h1
+                  className={`text-white p-1 ${
+                    navState && "filter brightness-0"
+                  }`}
+                >
+                  Hello, <a href="/profile">{currentUser.username} </a>
+                </h1>
+              </>
+            )}
             <li className="grid items-center">
-              <AiOutlineUserSwitch
-                className={`icon-style ${
-                  navState && "text-slate-900 transition-all duration-300"
-                }`}
-              />
+              {currentUser !== null || currentUser === {} ? (
+                <NavLink
+                  className={`text-white p-1 ${
+                    navState && "filter brightness-0"
+                  }`}
+                  onClick={handleSignout}
+                >
+                  Signout
+                </NavLink>
+              ) : (
+                <NavLink to="/signin">
+                  <AiOutlineUserSwitch
+                    className={`icon-style ${
+                      navState && "text-slate-900 transition-all duration-300"
+                    }`}
+                  />
+                </NavLink>
+              )}
             </li>
             <li className="grid items-center">
               <button
@@ -92,9 +128,7 @@ const Navbar = () => {
                       ? "bg-slate-900 text-slate-100 shadow-slate-900"
                       : "bg-slate-100 text-slate-900 shadow-slate-100"
                   }`}
-                >
-                  {/* {totalQTY} */}
-                </div>
+                ></div>
               </button>
             </li>
           </ul>
@@ -102,7 +136,6 @@ const Navbar = () => {
       </header>
     </>
   );
-   
-}
+};
 
 export default Navbar
