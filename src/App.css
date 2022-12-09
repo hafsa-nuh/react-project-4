@@ -1,3 +1,47 @@
+.buttons{
+  display: flex;
+  gap: 30px;
+}
+.buttons .add-to-cart {
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 2px solid #8a4af3;
+  /* margin-top: 30px; */
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: white;
+  color: #8a4af3;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.buttons .add-to-cart:hover {
+  transform: scale(1.1, 1.1)
+}
+
+.buttons .buy-now {
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 10px 20px;
+  background-color: #8a4af3;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.buttons .buy-now:hover {
+  transform: scale(1.1, 1.1)
+}
+
+
 /* Final */
 * {
   margin: 0;
