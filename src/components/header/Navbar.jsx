@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import {
-  AiOutlineSearch,
   AiFillHome,
   AiOutlineUserSwitch,
   AiFillShopping,
@@ -10,9 +9,10 @@ import logo from "../../assets/logo.png";
 import { useDispatch} from "react-redux";
 import { currentUserAdded } from "../../features/signinSlice"
 import { useNavigate } from "react-router-dom";
+import Searchbar from './Search';
 
 
-const Navbar = ({ currentUser }) => {
+const Navbar = ({ currentUser, productItems }) => {
   console.log(currentUser + "username");
 
   const navigate = useNavigate();
@@ -74,11 +74,7 @@ const Navbar = ({ currentUser }) => {
               </NavLink>
             </li>
             <li className="grid items-center">
-              <AiOutlineSearch
-                className={`icon-style ${
-                  navState && "text-slate-900 transition-all duration-300"
-                }`}
-              />
+              <Searchbar productItems={productItems} />
             </li>
             {currentUser !== null && (
               <>

@@ -5,16 +5,16 @@ import HighLights from '../components/products/HighLights';
 import TopRatedSales from '../components/hot-deals/TopRatedSales';
 import Hero from "../components/home/Hero"
 
-function HomePage() {
+function HomePage({ productItems }) {
   return (
     <>
-      <Hero/>
-    <section className="flex flex-col gap-16 relative">
-      <TopSales />
-      <Products />
-      <HighLights/>
-      <TopRatedSales/>
-    </section>
+      <Hero />
+      <section className="flex flex-col gap-16 relative">
+        <TopSales />
+        <Products productItems={productItems} />
+        <HighLights />
+        <TopRatedSales />
+      </section>
     </>
   );
 }

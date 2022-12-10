@@ -13,6 +13,16 @@ function App() {
   const currentUser = useSelector((state) => state.currentUser.user);
   const dispatch = useDispatch();
 
+  const [productItems, setProductItems] = useState([]);
+  // console.log(productItems)
+
+  // GET Products
+  useEffect(() => {
+    fetch("/products")
+      .then((r) => r.json())
+      .then((data) => setProductItems(data));
+  }, []);
+
   // GET /me
   useEffect(() => {
     fetch("/me").then((r) => {
@@ -20,16 +30,21 @@ function App() {
         r.json().then((user) => dispatch(currentUserAdded(user)));
       }
     });
-  },[]);
+  }, []);
 
   return (
     <>
-      <Navbar currentUser={currentUser} />
+      <Navbar currentUser={currentUser} productItems={productItems} />
       <br />
       <br />
       <br />
       <Routes>
-        <Route path="/" element={<HomePage currentUser={currentUser} />} />
+        <Route
+          path="/"
+          element={
+            <HomePage currentUser={currentUser} productItems={productItems} />
+          }
+        />
         <Route path="/products/:id" element={<ProductsDetails />} />
         <Route exact path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />

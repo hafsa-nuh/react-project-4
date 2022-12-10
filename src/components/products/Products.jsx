@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {NavLink} from "react-router-dom"
 import {
   AiFillShopping,
@@ -24,24 +24,15 @@ const Button = styled.button`
   background-color: rgb(203 213 225);
 `;
 
-function Products() {
-  const [productItems, setProductItems] = useState([]);
-  // console.log(productItems)
-  const [hoverEffects , setHoverEffect] = useState('opacity-0')
+function Products({ productItems }) {
+  const [hoverEffects, setHoverEffect] = useState("opacity-0");
   // to add load more button
-  const [visible, setVisible] =useState(3)
-    
-  // GET Products
-  useEffect(() => {
-    fetch("/products")
-    .then((r) => r.json())
-    .then((data) => setProductItems(data));
-  }, []);
+  const [visible, setVisible] = useState(3);
 
   // HoverEffect
   function handleHoverEnter() {
     setHoverEffect(" opacity-1 bg-[rgba(0,0,0,0.2)]");
-   }
+  }
 
   function handleHoverExit() {
     setHoverEffect(" opacity-0");
@@ -49,13 +40,11 @@ function Products() {
 
   // div style
   const iconStyle =
-    "h-[40px] w-[40px] rounded-full bg-white flex items-center justify-center m-3 hover:bg-[#894af3] hover:text-white hover:scale-[1.1] ease-in duration-100 cursor-pointer"
-  ;
-
+    "h-[40px] w-[40px] rounded-full bg-white flex items-center justify-center m-3 hover:bg-[#894af3] hover:text-white hover:scale-[1.1] ease-in duration-100 cursor-pointer";
   // onclick load more button
-  const showMoreProducts = ()=>{
-    setVisible((preValue)=> preValue + 4)
-  }
+  const showMoreProducts = () => {
+    setVisible((preValue) => preValue + 4);
+  };
 
   return (
     <>
@@ -66,7 +55,7 @@ function Products() {
           </h1>
         </div>
         <div className="p-7 flex flex-wrap">
-          {productItems.slice(0,visible).map((product, id) => {
+          {productItems.slice(0, visible).map((product, id) => {
             return (
               <>
                 <div
@@ -89,7 +78,7 @@ function Products() {
                       <AiOutlineHeart />
                     </div>
                     <div className={iconStyle}>
-                      <NavLink to={`products/${product.id}`} >
+                      <NavLink to={`products/${product.id}`}>
                         <AiOutlineSearch />
                       </NavLink>
                     </div>
@@ -99,7 +88,7 @@ function Products() {
             );
           })}
         </div>
-        <Button onClick={showMoreProducts} >Load More</Button>
+        <Button onClick={showMoreProducts}>Load More</Button>
       </div>
     </>
   );
