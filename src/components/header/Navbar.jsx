@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 import { NavLink } from 'react-router-dom';
 import logo from "../../assets/logo.png";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { currentUserAdded } from "../../features/signinSlice"
 import { useNavigate } from "react-router-dom";
 

@@ -20,7 +20,7 @@ function App() {
         r.json().then((user) => dispatch(currentUserAdded(user)));
       }
     });
-  }, []);
+  },[]);
 
   return (
     <>

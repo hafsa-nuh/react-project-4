@@ -70,6 +70,7 @@ function Hero() {
               </div>
             );
           }
+          return <></>
         })}
 
         {/* Right Arrow */}
