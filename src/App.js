@@ -9,6 +9,7 @@ import { currentUserAdded } from './features/signinSlice';
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from 'react';
 import Signup from './components/signup-signin/Signup';
+import Cart from './components/cart/Cart';
 function App() {
   const currentUser = useSelector((state) => state.currentUser.user);
   const dispatch = useDispatch();
@@ -35,9 +36,10 @@ function App() {
   return (
     <>
       <Navbar currentUser={currentUser} productItems={productItems} />
+      {/* <br />
       <br />
-      <br />
-      <br />
+      <br /> */}
+      <Cart/>
       <main className="flex flex-col gap-16 relative">
         <Routes>
           <Route
