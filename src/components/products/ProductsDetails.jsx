@@ -34,8 +34,8 @@ function ProductsDetails() {
             {product.description}
           </p>
           <div className="flex flex-col place-self-start">
-            <p className="mt-7 text-3xl">
-              Price: <b>Ksh {product.price}</b>
+            <p className="mt-7 text-3xl ">
+              Price: <b className="text-blue-500">Ksh {product.price}</b>
             </p>
             <div className="mt-7 text-2xl">
               Size
@@ -77,9 +77,8 @@ function ProductsDetails() {
         </div>
       </div>
       <TopRatedSales>
-        <Items/>
+        <Items />
       </TopRatedSales>
-
     </>
   );
 }

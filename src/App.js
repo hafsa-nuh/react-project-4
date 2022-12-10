@@ -38,17 +38,19 @@ function App() {
       <br />
       <br />
       <br />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <HomePage currentUser={currentUser} productItems={productItems} />
-          }
-        />
-        <Route path="/products/:id" element={<ProductsDetails />} />
-        <Route exact path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+      <main className="flex flex-col gap-16 relative">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage currentUser={currentUser} productItems={productItems} />
+            }
+          />
+          <Route path="/products/:id" element={<ProductsDetails />} />
+          <Route exact path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );
