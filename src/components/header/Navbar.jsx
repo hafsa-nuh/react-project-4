@@ -6,18 +6,22 @@ import {
 } from "react-icons/ai";
 import { NavLink } from 'react-router-dom';
 import logo from "../../assets/logo.png";
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { currentUserAdded } from "../../features/signinSlice"
 import { useNavigate } from "react-router-dom";
 import Searchbar from './Search';
+import { selectTotalQTY, setOpenCart } from '../../features/CartSlice';
 
 
 const Navbar = ({ currentUser, productItems }) => {
   console.log(currentUser + "username");
 
+  const totalQTY = useSelector(selectTotalQTY);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  // user 
   function handleSignout() {
     fetch("/signout", {
       method: "delete",
@@ -40,6 +44,15 @@ const Navbar = ({ currentUser, productItems }) => {
       window.removeEventListener("scroll", onNavScroll);
     };
   }, []);
+
+  // open cart
+  const onCartToggle = () => {
+    dispatch(
+      setOpenCart({
+        cartState: true,
+      })
+    );
+  }
 
   return (
     <>
@@ -110,7 +123,7 @@ const Navbar = ({ currentUser, productItems }) => {
             <li className="grid items-center">
               <button
                 type="button"
-                // onClick={onCartToggle}
+                onClick={onCartToggle}
                 className="border-none outline-none active:scale-110 transition-all duration-300 relative"
               >
                 <AiFillShopping
@@ -124,7 +137,7 @@ const Navbar = ({ currentUser, productItems }) => {
                       ? "bg-slate-900 text-slate-100 shadow-slate-900"
                       : "bg-slate-100 text-slate-900 shadow-slate-100"
                   }`}
-                >0</div>
+                >{totalQTY}</div>
               </button>
             </li>
           </ul>

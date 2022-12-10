@@ -1,8 +1,27 @@
 import React from 'react'
 import { AiFillStar, AiFillShopping } from "react-icons/ai";
 import { SplideSlide } from "@splidejs/react-splide";
+import { useDispatch } from 'react-redux';
+import { setAddItemToCart, setOpenCart } from '../../features/CartSlice';
 
 function Items({ id, title, text, rating, btn, img, price, color, shadow }) {
+  const dispatch = useDispatch();
+
+  // adding to cart
+  const onAddToCart = () => {
+    const item = { id, title, text, img, price, color, shadow };
+    dispatch(setAddItemToCart(item));
+  };
+
+  // open cart
+  const onCartToggle = () => {
+    dispatch(
+      setOpenCart({
+        cartState: true,
+      })
+    );
+  };
+
   return (
     <>
       <SplideSlide key={id} className="mb-0.5">
@@ -33,14 +52,17 @@ function Items({ id, title, text, rating, btn, img, price, color, shadow }) {
               <button
                 type="button"
                 className="bg-white/90 blur-effect-theme button-theme p-0.5 shadow shadow-sky-200"
-                // onClick={}
+                onClick={() => onAddToCart()}
               >
                 <AiFillShopping className="icon-style text-slate-900" />
               </button>
               <button
                 type="button"
                 className="bg-white/90 blur-effect-theme button-theme px-2 py-1 shadow shadow-sky-200 text-sm text-black"
-                // onClick={}
+                onClick={() => {
+                  onAddToCart();
+                  onCartToggle();
+                }}
               >
                 {btn}
               </button>

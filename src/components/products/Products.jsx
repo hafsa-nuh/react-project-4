@@ -28,6 +28,7 @@ function Products({ productItems }) {
   const [hoverEffects, setHoverEffect] = useState("opacity-0");
   // to add load more button
   const [visible, setVisible] = useState(3);
+  // const productItems = {}
 
   // HoverEffect
   function handleHoverEnter() {
@@ -45,6 +46,9 @@ function Products({ productItems }) {
   const showMoreProducts = () => {
     setVisible((preValue) => preValue + 4);
   };
+
+  // adding to cart
+  const onAddToCart = () => {};
 
   return (
     <>

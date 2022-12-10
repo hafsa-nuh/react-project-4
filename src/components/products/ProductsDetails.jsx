@@ -2,19 +2,34 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import TopRatedSales from "../hot-deals/TopRatedSales";
 import Items from "../hot-deals/Items";
+import { useDispatch } from "react-redux";
+import { setAddItemToCart } from "../../features/CartSlice";
 
 function ProductsDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   // console.log(product + "is it fetching");
 
-  useEffect(()=>{
+  useEffect(() => {
     const getProduct = async () => {
-    const response = await fetch(`/products/${id}`);
+      const response = await fetch(`/products/${id}`);
       setProduct(await response.json());
-    }
+    };
     getProduct();
-  })
+  });
+
+    const dispatch = useDispatch();
+  // const products =  product
+  // products = {image_url, name,description, price}
+    // adding to cart
+    // const addToCart = () => {
+    //   // const product = item
+    //   const item = { id, image_url,title, text, img, price, color, shadow };
+    //   dispatch(setAddItemToCart(item));
+    // };
+
+  // adding to cart
+  const onAddToCart = () => {};
 
   return (
     <>

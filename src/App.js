@@ -36,9 +36,9 @@ function App() {
   return (
     <>
       <Navbar currentUser={currentUser} productItems={productItems} />
-      {/* <br />
       <br />
-      <br /> */}
+      <br />
+      <br />
       <Cart/>
       <main className="flex flex-col gap-16 relative">
         <Routes>
